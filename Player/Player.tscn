@@ -605,7 +605,7 @@ height = 12.0
 
 [sub_resource type="CapsuleShape2D" id=47]
 radius = 5.4124
-height = 5.6252
+height = 2.05015
 
 [node name="Player" type="KinematicBody2D"]
 collision_layer = 2
@@ -667,9 +667,10 @@ disabled = true
 collision_layer = 4
 
 [node name="CollisionShape2D" parent="Hurtbox" index="0"]
-modulate = Color( 0.196078, 1, 0, 0.635294 )
-position = Vector2( -0.4375, -8.5 )
+modulate = Color( 0.196078, 1, 0, 1 )
+position = Vector2( -0.3125, -5.5625 )
 shape = SubResource( 47 )
+[connection signal="area_entered" from="Hurtbox" to="." method="_on_Hurtbox_area_entered"]
 
 [editable path="HitboxPivot/SwordHitbox"]
 

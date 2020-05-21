@@ -22,6 +22,7 @@ onready var animationState = animationTree.get("parameters/playback")
 onready var swordHitbox = $HitboxPivot/SwordHitbox
 
 func _ready():
+	stats.connect("no_health", self, "queue_free")
 	animationTree.active = true
 	swordHitbox.knockback_vector = roll_vector
 
@@ -79,3 +80,7 @@ func roll_animation_finished():
 		
 func attack_animation_finished():
 	state = MOVE
+
+
+func _on_Hurtbox_area_entered(area):
+	stats.health -= 1
