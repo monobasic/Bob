@@ -32,7 +32,9 @@ func _on_Timer_timeout():
 
 
 func _on_Hurtbox_invincibility_started():
-	set_deferred("monitorable", false)
+	set_deferred("monitorable", false) 
+	# set_deferred -> do something at the end of the game loop 
+	# (monitorable can't be set during process physics')
 
 
 func _on_Hurtbox_invincibility_ended():
