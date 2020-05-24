@@ -100,7 +100,7 @@ position = Vector2( 80, 96 )
 position = Vector2( 48, 160 )
 
 [node name="Tree2" parent="YSort/Trees" instance=ExtResource( 9 )]
-position = Vector2( 144, 56 )
+position = Vector2( 149.434, 60.3772 )
 
 [node name="Bat" parent="YSort" instance=ExtResource( 7 )]
 position = Vector2( 56, 88 )
